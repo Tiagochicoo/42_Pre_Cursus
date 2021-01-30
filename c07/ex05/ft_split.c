@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 16:21:24 by tpereira          #+#    #+#             */
-/*   Updated: 2021/01/28 19:13:43 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/01/29 12:05:12 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,39 +15,45 @@
 
 char	**ft_split(char *str, char *charset)
 {
-	int 	i;
+	int 	i0;
+	int		i1;
+	int		i2;
+	int 	i3;
 	char	**str2;
 	
-	i = 0;
-	while (str[i])
+	i0 = 0;
+	while (str[i0])
 	{
-		i++;
+		i0++;
 	}
-	str2 = malloc(sizeof(char) * i + 1);
-	i = 0;
-	while (str[i])
+	str2 = (char **)malloc(sizeof(char) * i0);
+	i0 = 0;
+	i2 = 0;
+	i3 = 0;
+	while (str[i0])
 	{
-		if (str[i] == *charset)
+		i1 = 0;
+		while (charset[i1])
 		{
-			while (*charset)
+			if (str[i0] != charset[i1])
 			{
-				if (str[i] != *charset)
+				if (str2[i2][i3])
 				{
-					break ;
+					str2[i2][i3] = str[i0];
+					i3++;
 				}
-				charset++;
-				i++;
+
 			}
-			i++;
+			else
+			{
+				i2++;
+				break ;
+			}
+			i1++;
 		}
-		else
-		{
-			str2[i] = str[i];
-			i++;
-		}
+		i0++;
 	}
-	str2 = 
-	return (*str2);
+	return (str2);
 }
 
 int		main(int argc, char **argv)
@@ -56,14 +62,14 @@ int		main(int argc, char **argv)
 	char	**split;
 
 	argc = argc + 0;
-	//split = ft_split("ImtmVrV6Ov8QrkGGUglBy7Vgsu iIsdl5XyT35Czv4xeu", "yenORYQ");
-	split = ft_split(argv[1], argv[2]);
+	split = ft_split("ImtmVrV6Ov8QrkGGUglBy7Vgsu iIsdl5XyT35Czv4xeu", "yenORYQ");
+	//split = ft_split(argv[1], argv[2]);
+	(void)argv;
 	index = 0;
 	printf("tab start\n");
 	while (split[index])
 	{
 		printf("tab[%d]: $%s$\n", index, split[index]);
-		fflush(stdout);
 		index++;
 	}
 	printf("tab end\n");
