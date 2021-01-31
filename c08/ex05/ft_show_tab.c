@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 15:09:00 by tpereira          #+#    #+#             */
-/*   Updated: 2021/01/31 15:43:50 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/01/31 15:53:41 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_putnbr(int nb)
 	}
 }
 
-void	ft_show_tab(struct		s_stock_str		*par)
+void	ft_show_tab(struct s_stock_str *par)
 {
 	int	i;
 
