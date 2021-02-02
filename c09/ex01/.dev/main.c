@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 18:24:07 by tpereira          #+#    #+#             */
-/*   Updated: 2021/01/31 19:11:25 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/01 20:11:36 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	ft_putstr("It works!");
+	ft_putstr("Helloooooo!");
 	ft_putchar('\n');
 	return (0);
 }

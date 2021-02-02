@@ -6,11 +6,12 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 16:21:24 by tpereira          #+#    #+#             */
-/*   Updated: 2021/02/02 18:25:26 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/01/31 21:28:02 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -110,4 +111,24 @@ char	**ft_split(char *str, char *charset)
 	}
 	strs[i] = 0;
 	return (strs);
+}
+
+int		main(int argc, char **argv)
+{
+	int		index;
+	char	**split;
+
+	argc = argc + 0;
+	split = ft_split("My name is tiago-chico", " -");
+	//split = ft_split(argv[1], argv[2]);
+	(void)argv;
+	index = 0;
+	printf("tab start\n");
+	while (split[index])
+	{
+		printf("tab[%d]: $%s$\n", index, split[index]);
+		index++;
+	}
+	printf("tab end\n");
+	return (0);
 }
