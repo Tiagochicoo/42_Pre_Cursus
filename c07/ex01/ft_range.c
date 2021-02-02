@@ -6,11 +6,10 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 12:23:56 by tpereira          #+#    #+#             */
-/*   Updated: 2021/01/28 16:17:16 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/02/02 18:37:44 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 int		*ft_range(int min, int max)
@@ -33,19 +32,4 @@ int		*ft_range(int min, int max)
 	array[i] = '\0';
 
 	return (array);
-}
-
-int		main(void)
-{
-	int i;
-	int *array;
-
-	array = ft_range(3, 9);
-	i = 0;
-	while (array[i])
-	{
-		printf("%d", array[i]);
-		i++;
-	}
-	return (0);
 }
